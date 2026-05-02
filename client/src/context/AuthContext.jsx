@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
       setIsLoading(false);
       return;
     }
-    api.get('/users/me')
+    api.get('/user/profile')
       .then(({ data }) => setUser(data.user))
       .catch(() => localStorage.removeItem('accessToken'))
       .finally(() => setIsLoading(false));

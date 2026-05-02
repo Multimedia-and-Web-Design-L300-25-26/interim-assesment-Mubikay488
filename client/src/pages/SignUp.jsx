@@ -924,7 +924,7 @@ const SignUp = () => {
 	const handleRegister = async () => {
 		setRegisterError('');
 		try {
-			const res = await fetch(`${API_BASE}/register`, {
+			const res = await fetch(`${API_BASE}/api/auth/register`, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ name, email, password }),
