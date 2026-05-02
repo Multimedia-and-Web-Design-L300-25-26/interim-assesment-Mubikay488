@@ -1,6 +1,6 @@
-const Crypto = require("../models/Crypto");
-const Wallet = require("../models/Wallet");
-const { generateMockAddress } = require("../utils/wallet");
+import Crypto from "../models/Crypto.js";
+import Wallet from "../models/Wallet.js";
+import { generateMockAddress } from "../utils/wallet.js";
 
 const SEEDED = { createdBy: null };
 
@@ -77,4 +77,4 @@ const addCrypto = async (req, res) => {
   }
 };
 
-module.exports = { getAllCrypto, getGainers, getNewListings, addCrypto };
+export { getAllCrypto, getGainers, getNewListings, addCrypto };

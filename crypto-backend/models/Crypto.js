@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const cryptoSchema = new mongoose.Schema(
   {
@@ -39,4 +39,4 @@ const cryptoSchema = new mongoose.Schema(
 cryptoSchema.index({ change24h: -1 });
 cryptoSchema.index({ createdAt: -1 });
 
-module.exports = mongoose.model("Crypto", cryptoSchema);
+export default mongoose.model("Crypto", cryptoSchema);

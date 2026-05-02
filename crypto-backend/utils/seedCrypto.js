@@ -6,7 +6,7 @@
  * Called once after DB connects — skips any symbol that already exists.
  */
 
-const Crypto = require("../models/Crypto");
+import Crypto from "../models/Crypto.js";
 
 const icon = (sym) =>
   `https://cdn.jsdelivr.net/gh/spothq/cryptocurrency-icons@master/32/color/${sym.toLowerCase()}.png`;
@@ -251,4 +251,4 @@ async function seedCrypto() {
   }
 }
 
-module.exports = { seedCrypto };
+export { seedCrypto };

@@ -15,7 +15,7 @@ export const protect = (req, res, next) => {
     const token = authHeader.split(" ")[1];
 
     // Verify token
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_ACCESS_SECRET);
 
     // Save user data to request
     req.user = decoded;

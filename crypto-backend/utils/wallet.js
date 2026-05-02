@@ -19,4 +19,4 @@ const generateMockAddress = (asset) => {
   return `${prefix}${random}`;
 };
 
-module.exports = { generateMockAddress };
+export { generateMockAddress };

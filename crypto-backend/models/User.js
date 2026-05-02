@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-// import bycrptjs from "bcryptjs";
+import bcrypt from "bcryptjs";
 
 // const mongoose = require("mongoose");
 // const bycrypt = require("bcryptjs");

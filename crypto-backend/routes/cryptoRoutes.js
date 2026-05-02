@@ -1,13 +1,13 @@
-const express = require("express");
-const { body } = require("express-validator");
-const { validate } = require("../middleware/validate.middleware");
-const { protect } = require("../middleware/auth.middleware");
-const {
+import express from "express";
+import { body } from "express-validator";
+import { validate } from "../middleware/validate.middleware.js";
+import { protect } from "../middleware/auth.middleware.js";
+import {
   getAllCrypto,
   getGainers,
   getNewListings,
   addCrypto,
-} = require("../controllers/crypto.controller");
+} from "../controllers/cryptoController.js";
 
 const router = express.Router();
 
@@ -42,4 +42,4 @@ router.post(
   addCrypto,
 );
 
-module.exports = router;
+export default router;
